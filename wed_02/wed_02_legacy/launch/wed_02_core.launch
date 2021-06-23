@@ -1,0 +1,15 @@
+<launch>
+
+  <!--- Run servers -->
+  <include file="$(find wpb_home_behaviors)/launch/all_servers.launch" />
+
+  <!-- Run wpb_home core -->
+  <node pkg="wpb_home_bringup" type="wpb_home_core" name="wpb_home_core" output="screen">
+    <param name="serial_port" type="string" value="/dev/ftdi"/> 
+    <rosparam file="$(find wpb_home_bringup)/config/wpb_home.yaml" command="load" />
+  </node>
+
+  <!-- My_js_ctrl.cpp -->
+  <node pkg="wed_02_legacy" type="my_js_vel" name="TeleopJoy" output="screen"/>
+
+</launch>

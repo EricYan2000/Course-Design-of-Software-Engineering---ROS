@@ -1,0 +1,13 @@
+<launch>
+
+    <node pkg="xfyun_waterplus" type="iat_node" name="xfyun_iat_node" output="screen">
+        <param name="cn" type="bool" value="true"/> 
+    </node>
+    
+    <node pkg="xfyun_waterplus" type="tts_node" name="xfyun_tts_node" /> 
+
+    <node name="soundplay_node" pkg="sound_play" type="soundplay_node.py"/>
+
+    <node pkg="wed_02_sr_pkg" type="wed_02_sr_node_cn" name="cn_voice_control" output="screen"/>
+
+</launch>

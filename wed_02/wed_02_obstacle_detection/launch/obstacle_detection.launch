@@ -1,0 +1,7 @@
+<launch>
+
+  <include file = "$(find wpb_home_bringup)/launch/lidar_test.launch"/>
+  <include file = "$(find wpb_home_bringup)/launch/js_ctrl.launch"/>
+  <node pkg="wed_02_obstacle_detection" type="obstacle_detection" name="obstacle_detection1"/>
+
+</launch>

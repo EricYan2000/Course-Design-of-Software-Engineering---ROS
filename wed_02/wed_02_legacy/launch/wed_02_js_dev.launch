@@ -1,0 +1,9 @@
+<launch>
+
+  <!-- js node -->
+  <node respawn="false" pkg="joy" type="joy_node" name="wpb_home_joy" >
+    <param name="dev" type="string" value="/dev/input/js0" />
+    <param name="deadzone" value="0.12" />
+  </node>
+
+</launch>
